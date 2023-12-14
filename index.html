@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>My Portfolio</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+
+<body>
+
+  <style>
+    /* customizable snowflake styling */
+    .snowflake {
+      color: #ffff;
+      font-size: 1em;
+      font-family: Arial, sans-serif;
+      text-shadow: 0 0 5px #000;
+    }
+
+    @-webkit-keyframes snowflakes-fall {
+      0% {
+        top: -10%
+      }
+
+      100% {
+        top: 100%
+      }
+    }
+
+    @-webkit-keyframes snowflakes-shake {
+
+      0%,
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+      }
+
+      50% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px)
+      }
+    }
+
+    @keyframes snowflakes-fall {
+      0% {
+        top: -10%
+      }
+
+      100% {
+        top: 100%
+      }
+    }
+
+    @keyframes snowflakes-shake {
+
+      0%,
+      100% {
+        transform: translateX(0)
+      }
+
+      50% {
+        transform: translateX(80px)
+      }
+    }
+
+    .snowflake {
+      position: fixed;
+      top: -10%;
+      z-index: 9999;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: default;
+      -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+      -webkit-animation-duration: 10s, 3s;
+      -webkit-animation-timing-function: linear, ease-in-out;
+      -webkit-animation-iteration-count: infinite, infinite;
+      -webkit-animation-play-state: running, running;
+      animation-name: snowflakes-fall, snowflakes-shake;
+      animation-duration: 10s, 3s;
+      animation-timing-function: linear, ease-in-out;
+      animation-iteration-count: infinite, infinite;
+      animation-play-state: running, running
+    }
+
+    .snowflake:nth-of-type(0) {
+      left: 1%;
+      -webkit-animation-delay: 0s, 0s;
+      animation-delay: 0s, 0s
+    }
+
+    .snowflake:nth-of-type(1) {
+      left: 10%;
+      -webkit-animation-delay: 1s, 1s;
+      animation-delay: 1s, 1s
+    }
+
+    .snowflake:nth-of-type(2) {
+      left: 20%;
+      -webkit-animation-delay: 6s, .5s;
+      animation-delay: 6s, .5s
+    }
+
+    .snowflake:nth-of-type(3) {
+      left: 30%;
+      -webkit-animation-delay: 4s, 2s;
+      animation-delay: 4s, 2s
+    }
+
+    .snowflake:nth-of-type(4) {
+      left: 40%;
+      -webkit-animation-delay: 2s, 2s;
+      animation-delay: 2s, 2s
+    }
+
+    .snowflake:nth-of-type(5) {
+      left: 50%;
+      -webkit-animation-delay: 8s, 3s;
+      animation-delay: 8s, 3s
+    }
+
+    .snowflake:nth-of-type(6) {
+      left: 60%;
+      -webkit-animation-delay: 6s, 2s;
+      animation-delay: 6s, 2s
+    }
+
+    .snowflake:nth-of-type(7) {
+      left: 70%;
+      -webkit-animation-delay: 2.5s, 1s;
+      animation-delay: 2.5s, 1s
+    }
+
+    .snowflake:nth-of-type(8) {
+      left: 80%;
+      -webkit-animation-delay: 1s, 0s;
+      animation-delay: 1s, 0s
+    }
+
+    .snowflake:nth-of-type(9) {
+      left: 90%;
+      -webkit-animation-delay: 3s, 1.5s;
+      animation-delay: 3s, 1.5s
+    }
+
+    .snowflake:nth-of-type(10) {
+      left: 25%;
+      -webkit-animation-delay: 2s, 0s;
+      animation-delay: 2s, 0s
+    }
+
+    .snowflake:nth-of-type(11) {
+      left: 65%;
+      -webkit-animation-delay: 4s, 2.5s;
+      animation-delay: 4s, 2.5s
+    }
+  </style>
+  <div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+  </div>
+
+  <!-- header  -->
+
+  <header class="header">
+    <img src="assets/logo/logo.png" alt="" class="logo">
+    <ul class="main-nav-list">
+      <li><a href="#" class="main-nav-link">Home</a></li>
+      <li><a href="#" class="main-nav-link">Work</a></li>
+      <li><a href="#" class="main-nav-link">Contact</a></li>
+    </ul>
+  </header>
+
+  <section class="hero">
+    <img src="assets/hero/webdev.png" alt="" class="hero-img">
+
+    <div class="container">
+      <h2>Hi I'm PROF</h2>
+      <h2>Hi I'm PROF</h2>
+      <p class="hero-subheading">A Frontend Developer !</p>
+      <p class="prof" style="color: #fffa; font-size: 10px;">Web developer / Wordpress Developer</p>
+    </div>
+
+    <div class="hero-model">
+      <model-viewer class="robo" src="/models-20231210T084910Z-001/models/robot_playground/scene.gltf" camer-contros
+        disable-pen disable-zoom interaction-prompt="none" field-of-view="10deg"
+        autoplay="experiment_object_159"></model-viewer>
+    </div>
+  </section>
+  <section class="about-me">
+    <div class="about-me-description">
+      <p class="introduction">INTRODUCTION !</p>
+      <h1 class="about-me-title">About Me</h1>
+      <p class="about-me-subheading">
+        Hello, I am Prof Adefila a Frontend Developer and also WordPress Developer. From choreography on stage to lines
+        of
+        code on a web page, I love combining the world's logic and creative design to make eye-catching, accessible and
+        user-friendly websites and applications.
+
+        Technology leads, society follows. The move towards increasing inclusivity and diversity in the industry through
+        representation is of importance to me
+
+        I am excited to make the leap and keep continue refining my skills with the right company. drop me a line and
+        you
+        won't regret it.
+      </p>
+    </div>
+
+    <div class="cards">
+      <div class="card animation">
+        <img src="/assets/skills/react.png" alt="" class="reactImg">
+        <p class="title">React Js</p>
+      </div>
+      <div class="card animation">
+        <img src="/assets/skills/angg.png" alt="" class="angular">
+        <p class="title">Angular</p>
+      </div>
+      <div class="card animation">
+        <img src="/assets/skills/ThreeJs.png" alt="" class="threeJsImg">
+        <p class="title">Three Js</p>
+      </div>
+      <div class="card animation">
+        <img src="/assets/skills/js.png" alt="" class="js">
+        <p class="title">JavaScript</p>
+      </div>
+      <div class="card animation">
+        <img src="/assets/skills/html.png" alt="" class="htmlImg">
+        <p class="title">HTML & CSS</p>
+      </div>
+      <div class="card animation">
+        <img src="/assets/skills/sql.png" alt="" class="sql">
+        <p class="title">SQL</p>
+      </div>
+      <div class="card animation">
+        <img src="/assets/skills/word.png" alt="" class="word">
+        <p class="title">WordPress</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="time-line-section">
+    <div class="time-line-content">
+      <div class="heading-description">
+        <p class="time-line-title">A WORK IN PROGRESS!</p>
+        <h1 class="time-line-subheading">Work Experience!</h1>
+      </div>
+      <div class="timeline">
+        <div class="time-line-description">
+          <div class="mini-circle"></div>
+          <div class="content">
+            <h3 class="content-timeline-title">
+              Intern Web Developer <a href="https://www.kodehauz.com/"
+                style="text-decoration: none; color: #7a31bf;">KODEHAUZ</a>
+            </h3>
+
+            <p class="content-timeline-description">
+              Design and establish user-friendly websites, including optimized check-out page,
+              resulting in 25% increase in user clicks and subsequently 33% in customer
+              engagement.
+            </p>
+          </div>
+        </div>
+        <div class="time-line-description">
+          <div class="mini-circle"></div>
+          <div class="content">
+            <h3 class="content-timeline-title">
+              WordPress Developer <a href="https://www.3dimgroup.com/" style="text-decoration: none; color: #7a31bf;">3D
+                IMPACT MARKETING</a>
+            </h3>
+
+            <p class="content-timeline-description">
+              Revamped an e-commerce platform, focusing on responsive design and optimizing
+              the checkout process.
+              Took the lead in optimizing a content-heavy website, reducing page load times by
+              25%
+            </p>
+          </div>
+        </div>
+        <div class="time-line-description">
+          <div class="mini-circle"></div>
+          <div class="content">
+            <h3 class="content-timeline-title">
+              WordPress Developer <a href="https://thevapeshopng.com/"
+                style="text-decoration: none; color: #7a31bf;">THEVAPESHOPNG</a>
+            </h3>
+
+            <p class="content-timeline-description">
+              Built an e-comerce vape store,User engagement shot up by 40% within the first month, creating a vibrant
+              online community.Improved user satisfaction and search engine rankings through advanced caching and code
+              optimization.
+            </p>
+          </div>
+        </div>
+        <div class="time-line-description">
+          <div class="mini-circle"></div>
+          <div class="content">
+            <h3 class="content-timeline-title">
+              Frontend Developer <a href="https://unionsystems.com/"
+                style="text-decoration: none; color: #7a31bf;">UNION SYSTEMS</a>
+            </h3>
+
+            <p class="content-timeline-description">
+              Leveraged mastery of HTML, CSS and JavaScript to build top-quality code for
+              diverse projects. Completed programming projects that complied with existing coding standards and
+              design styles using js frameworks
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="youtube">
+    <h1 class="youtube-title">Projects Done</h1>
+    <!-- <p class="youtube-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis et repellendus
+      reprehenderit sit ab nemo itaque consequatur assumenda consequuntur cumque.</p> -->
+    <div class="videos">
+      <div class="youtube-videos">
+        <img src="/assets/links/physio.png" class="images" alt="">
+        <h2 class="videos-title">Hospital Website</h2>
+        <p class="videos-description">A basic hospital website built with HTML, CSS, Bootstrap & JavaScript</p>
+        <a href="https://demo-hospital-website.vercel.app/" target="_blank" class="btn">View</a>
+      </div>
+      <!-- <div class="videos"> -->
+      <div class="youtube-videos">
+        <img src="/assets/links/estate.png" class="images" alt="">
+        <h2 class="videos-title">Real Estate Website</h2>
+        <p class="videos-description">Fully responsive demo website for a real estate built with HTML, CSS, Bootstrap &JavaScript</p>
+        <a href="https://profs-estate-website.vercel.app/" target="_blank" class="btn">View</a>
+      </div>
+      <!-- <div class="videos"> -->
+      <div class="youtube-videos">
+        <img src="/assets/links//vape.png" class="images" alt="">
+        <h2 class="videos-title">A Vape E-commerce Website</h2>
+        <p class="videos-description">Fully functional ecommerce store with payment gate way integrated built with WordPress</p>
+        <a href="https://www.youtube.com/watch?v=lKCUMbd_Wi4&t=2340s" target="_blank" class="btn">View</a>
+      </div>
+      <div class="youtube-videos">
+        <img src="/assets/links/weather.png" class="images" alt="">
+        <h2 class="videos-title">Weather App</h2>
+        <p class="videos-description">Weather application built with JavaScript</p>
+        <a href="https://www.youtube.com/watch?v=lKCUMbd_Wi4&t=2340s" target="_blank" class="btn">View</a>
+      </div>
+
+    </div>
+
+  </section>
+  <section class="final">
+    <div class="form-box">
+      <h1 class="form-title">Contact</h1>
+      <div class="form-bg">
+        <form id="form">
+          <div class="form-content">
+            <div class="email-box">
+              <label for="email" class="email-title"></label>
+              <input type="email" id="email" name="email" placeholder="E-mail" class="email-input">
+            </div>
+
+            <div class="subject-box">
+              <label for="subject" class="subject-title"></label>
+              <input type="text" id="subject" name="subject" placeholder="Subject" class="subject-input" />
+            </div>
+
+            <div class="message-box">
+              <label for="message" class="message-title"></label>
+              <textarea id="message" name="message" placeholder="Message" class="message-input"></textarea>
+            </div>
+
+            <div id="buttons">
+              <button type="submit" class="send-button" disabled>Send</button>
+              <button type="reset" class="reset-button">Reset</button>
+            </div>
+          </div>
+        </form>
+        <!-- <div id="spinner" class="hideSpinner messageSent">
+          <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+          </div>
+        </div>
+        <div id="spinner" class="hideSpinner messageSent">
+          <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <model-viewer class="robo" src="/models-20231210T084910Z-001/models/robot_playground/scene.gltf" camer-contros
+      disable-pen disable-zoom interaction-prompt="none" field-of-view="10deg"
+      autoplay="experiment_object_159"></model-viewer>
+  </section>
+<footer>
+
+</footer>
+</body>
+
+</html>
