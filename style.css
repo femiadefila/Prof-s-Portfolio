@@ -796,6 +796,13 @@ nav .mainMenu {
   transition: top 1s ease 0s;
 }
 
+.introduction{
+  font-size: 13px;
+}
+
+.about-me-title{
+  font-size: larger;
+}
 .about-me-description{
 margin-bottom: 120%;
 margin-right: -45%;
@@ -845,6 +852,27 @@ width: 70%;
 }
 .time-line-subheading{
   font-size: large;
+}
+
+.youtube{
+  margin-top: -40%;
+}
+.youtube-title{
+  font-size: larger;
+}
+
+.videos-description{
+  width: 40vw;
+  font-size: 12px;
+}
+.btn{
+  width: 6vh;
+  height: 3vh;
+  margin-bottom: 3vh;
+}
+
+.videos{
+  margin: 20px;
 }
 
 }
