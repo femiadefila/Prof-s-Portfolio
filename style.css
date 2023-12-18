@@ -773,11 +773,14 @@ hideSpinner {
   .container {
     margin-left: 120px;
     font-size: small;
-    margin-top: -20%;
+    margin-top: -50%;
   }
 
 .header{
   padding-top: 10px;
+}
+.header img{
+  font-size: 90px;
 }
 
 nav .mainMenu {
