@@ -88,7 +88,7 @@ body {
 }
 
 .container h2:nth-child(2) {
-  color: #dec5f6;
+  color: #eadcf8;
   animation: wave 4s ease-in-out infinite;
 }
 
@@ -748,7 +748,12 @@ hideSpinner {
 
 @media (max-width: 600px) {
   .container {
-    margin-right: 10px;
+    margin-left: 120px;
     font-size: small;
+    margin-top: -20%;
+  }
+
+  .prof{
+    text-align:;
   }
 }
