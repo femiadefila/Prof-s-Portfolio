@@ -816,4 +816,18 @@ width: 70%;
 .time-line-section{
   margin-top: -100%;
 }
+
+.content {
+  width: calc(100% - 2vw);
+}
+
+.mini-circle {
+  width: 4.7vw;
+  height: 2.3vh;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 1%;
+  top: 20%;
+  transform: translateX(-70%);
+}
 }
