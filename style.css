@@ -60,7 +60,7 @@ nav .openMenu {
   cursor: pointer;
 }
 
-nav .mainMenu .closeMenu{
+nav .closeMenu{
   font-size: 20px;
   display: none;
   cursor: pointer;
@@ -176,13 +176,14 @@ model-viewer {
   width: 100vw;
   height: 100vh;
   padding: 0 10vw;
+  text-align: center;
 }
 
 .about-me-description {
   width: 30vw;
-  height: 35vh;
+  height: 40vh;
   position: absolute;
-  margin-top: -90vh;
+  margin-top: -60vh;
   margin-left: -50vw;
 }
 
@@ -235,7 +236,7 @@ model-viewer {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  top: 60vh;
+  top: 70vh;
 }
 
 .card {
@@ -781,26 +782,34 @@ hideSpinner {
   padding-top: 10px;
 }
 
-nav .mainMenu {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgb(0, 0, 0);
-  transition: top 1s ease 0s;
+.mainMenu{
   display: none;
 }
 
-nav .openMenu {
+nav .openMenu{
   display: block;
 }
 
-nav .openMenu {
-  display: block;
+nav .mainMenu {
+  height: 80vh;
+  transition: top 1s ease 0s;
 }
+
+.about-me-description{
+margin-bottom: 120%;
+margin-right: -30%;
+width: 70%;
+}
+
+.cards{
+  margin-top: -100%;
+  /* margin-left: -24%; */
+}
+
+.card{
+  width: 11%;
+  height: 40px;
+  margin: -60px;
+}
+
 }
