@@ -350,7 +350,6 @@ model-viewer {
 .time-line-title {
   margin-top: 30px;
   color: #ffffff5a;
-  font-size: 1vw;
   padding-bottom: 2vh;
   font-family: 'Poppins', sans-serif;
   margin-left: -20vw;
@@ -822,7 +821,7 @@ width: 70%;
 }
 
 .mini-circle {
-  width: 4.7vw;
+  width: 4.9vw;
   height: 2.3vh;
   border-radius: 50%;
   background-color: #fff;
@@ -837,4 +836,8 @@ width: 70%;
   padding-top: 2vh;
   line-height: 1.2;
 }
+.time-line-description{
+  width: 70vw;
+}
+
 }
