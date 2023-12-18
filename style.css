@@ -145,15 +145,15 @@ nav .closeMenu{
 
 .hero-subheading {
   color: #fff;
-  font-size: 10px;
+  font-size: 20px;
   font-weight: 400;
-  margin-left: 2.6vw;
+  margin-left: 2.1vw;
   margin-top: 20px;
 }
 
 .prof {
   color: #fffa;
-  font-size: 8px;
+  font-size: 10px;
  
 }
 
@@ -779,6 +779,16 @@ hideSpinner {
     margin-top: -60%;
   }
 
+  .hero-subheading{
+    font-size: large;
+    margin-right: 40px;
+    width: 300px;
+  }
+
+  .prof{
+    font-size: 10px;
+  }
+
 .header{
   padding-top: 10px;
 }
@@ -871,9 +881,4 @@ width: 70%;
   margin-bottom: 3vh;
   font-size: 13px;
 }
-
-.videos{
-  margin: 20px;
-}
-
 }
