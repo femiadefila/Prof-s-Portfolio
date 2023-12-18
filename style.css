@@ -821,7 +821,7 @@ width: 70%;
 }
 
 .mini-circle {
-  width: 4.9vw;
+  width: 4.5vw;
   height: 2.3vh;
   border-radius: 50%;
   background-color: #fff;
@@ -838,6 +838,13 @@ width: 70%;
 }
 .time-line-description{
   width: 70vw;
+}
+
+.time-line-title{
+  font-size: small;
+}
+.time-line-subheading{
+  font-size: large;
 }
 
 }
