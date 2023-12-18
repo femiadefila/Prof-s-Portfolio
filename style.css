@@ -145,7 +145,7 @@ nav .mainMenu .closeMenu{
 
 .hero-subheading {
   color: #fff;
-  font-size: 1.5vw;
+  font-size: 10px;
   font-weight: 400;
   margin-left: 2.6vw;
   margin-top: 20px;
@@ -153,7 +153,7 @@ nav .mainMenu .closeMenu{
 
 .prof {
   color: #fffa;
-  font-size: 10px;
+  font-size: 8px;
  
 }
 
@@ -772,8 +772,7 @@ hideSpinner {
 @media (max-width: 600px) {
   .container {
     margin-left: 120px;
-    font-size: small;
-    margin-top: -50%;
+    margin-top: -60%;
   }
 
 .header{
