@@ -862,13 +862,14 @@ width: 70%;
 }
 
 .videos-description{
-  width: 40vw;
-  font-size: 12px;
+  width: 50vw;
+  font-size: 13px;
 }
 .btn{
-  width: 6vh;
-  height: 3vh;
+  width: 7vh;
+  height: 4vh;
   margin-bottom: 3vh;
+  font-size: 13px;
 }
 
 .videos{
