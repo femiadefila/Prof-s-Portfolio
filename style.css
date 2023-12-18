@@ -803,13 +803,15 @@ width: 70%;
 
 .cards{
   margin-top: -70%;
-  /* margin-left: -24%; */
 }
 
 .card{
-  width: 11%;
+  width: 12%;
   height: 40px;
-  margin: -60px;
+  padding: 0px;
 }
 
+.time-line-section{
+  margin-top: -100%;
+}
 }
