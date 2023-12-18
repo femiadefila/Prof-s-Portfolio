@@ -93,7 +93,6 @@ nav .closeMenu{
 
 .container {
   margin-left: -10%;
-  /* Adjust the margin-left value to move it to the left */
   margin-right: 100px;
   margin-bottom: 30%;
 }
@@ -111,7 +110,7 @@ nav .closeMenu{
 }
 
 .container h2:nth-child(2) {
-  color: #eadcf8;
+  color: #f2ecf8;
   animation: wave 4s ease-in-out infinite;
 }
 
@@ -780,9 +779,7 @@ hideSpinner {
   }
 
   .hero-subheading{
-    font-size: large;
-    margin-right: 40px;
-    width: 300px;
+    font-size: px;
   }
 
   .prof{
