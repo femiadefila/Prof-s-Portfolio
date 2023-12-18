@@ -769,6 +769,8 @@ hideSpinner {
   width: 50vw;
 }
 
+
+
 @media (max-width: 600px) {
   .container {
     margin-left: 120px;
@@ -777,9 +779,6 @@ hideSpinner {
 
 .header{
   padding-top: 10px;
-}
-.header img{
-  font-size: 90px;
 }
 
 nav .mainMenu {
