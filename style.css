@@ -40,7 +40,7 @@ body {
 
 nav .mainMenu li a {
   display: inline-block;
-  padding: 15px;
+  padding: 10px;
   text-decoration: none;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
@@ -752,4 +752,14 @@ width: 70%;
   font-size: 13px;
 }
 
+#form{
+  width: 100%;
+}
+.final{
+  display: block;
+}
+.robo{
+  margin-top: -60%;
+  width: 100%;
+}
 }
